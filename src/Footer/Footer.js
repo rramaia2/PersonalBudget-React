@@ -7,19 +7,17 @@ function Footer() {
 
     <div className="center" aria-label="COPYRIGHT INFORMATION">
 
-      All rights reserved &copy; Raghava Ramaiahgari
+      All rights reserved &copy; Raghava Ramaiahgari 
 
       <div className="h-card">
 
-        <p className="p-name">Raghava Ramaiahgari</p>
+      Email me: <a className="u-email" href="mailto:rramaia2@uncc.edu"><i>rramaia2@uncc.edu</i></a>
+
         &nbsp;
 
-
-        <a className="u-email" href="mailto:rramaia2@uncc.edu">Email me</a>&nbsp;
-
-        <p className="p-locality">NORTH CAROLINA</p>
+        ,<p className="p-locality">Charlotte</p>
         ,&nbsp;
-        <p className="p-country-name">USA</p>
+        <p className="p-name">NC</p>
       </div>
     </div>
   </footer>

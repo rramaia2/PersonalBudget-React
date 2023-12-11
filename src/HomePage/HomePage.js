@@ -256,33 +256,6 @@ function HomePage() {
 
   return (
     <div className="pagecontent" style={{ display: "flex" }}>
-      {/* <div
-        className="sidebar"
-        style={{ height: "100%", marginTop: "20px", paddingTop: "20px" }}
-      >
-        <ul>
-          <li>
-            <a href="/usermanual" tabIndex="3">
-              User Manual
-            </a>
-          </li>
-          <li>
-            <a href="/homepage" tabIndex="4">
-              HomePage
-            </a>
-          </li>
-          <li>
-            <a href="/configure" tabIndex="5">
-              Configure
-            </a>
-          </li>
-          <li>
-            <a href="/enterusedbudget" tabIndex="6">
-              Allocate Used Budget
-            </a>
-          </li>
-        </ul>
-      </div> */}
       <div className="homepage-container" style={{ paddingLeft: "25%" }}>
         <div className="tablecontent" style={{ width: "100%", paddingBottom: "4cm" }}>
           <div

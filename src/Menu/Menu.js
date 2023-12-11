@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import './Menu.css'; // Import the CSS file
+import './Menu.scss'; 
 import axios from 'axios';
 import styled from 'styled-components';
 
@@ -58,17 +58,16 @@ function Menu() {
         {!userId ? (
           <>
             <li><Link itemProp="url" to="/login" tabIndex="5">Login</Link></li>
-            <li><Link itemProp="url" to="/register" tabIndex="6">Register</Link></li>
+            <li><Link itemProp="url" to="/Sign Up" tabIndex="6">Sign Up</Link></li>
           </>
         ) : (
           <>
-            <li><span>Welcome, {userFirstName}!</span></li>
-            <li><Link itemProp="url" to="/usermanual" tabIndex="2">User Manual</Link></li>
             <li><Link itemProp="url" to="/homepage" tabIndex="3">HomePage</Link></li>
+            <li><Link itemProp="url" to="/Howtouse" tabIndex="2">Instructions</Link></li>
             <li><Link itemProp="url" to="/enterusedbudget" tabIndex="2">Used Budget</Link></li>
             <li><Link itemProp="url" to="/configure" tabIndex="2">Configure Budget</Link></li>
             <li><Link itemProp="url" to="/" tabIndex="11" onClick={handleLogout}>Logout</Link></li>
-            <li><span>Welcome, {userFirstName}!</span></li>
+            <li><span>Hello {userFirstName}</span></li>
           </>
         )}
       </ul>

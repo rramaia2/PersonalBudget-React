@@ -76,6 +76,10 @@ footer.bottom {
   color: #ecf0f1;
   text-align: center;
   width: 100%;
+  position: fixed; /* Fixed positioning to keep it at the bottom */
+  padding: 10px 0; /* Adjust padding as needed */
+  z-index: 1000; /* Ensure it's above other elements */
+  height: 10%;
 }
 
 footer.bottom .center {

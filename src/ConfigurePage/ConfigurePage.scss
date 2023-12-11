@@ -11,6 +11,7 @@
   .forms-container {
     display: flex;
     justify-content: space-between;
+    background-color:#33f9fd;
 
     .allocation-form,
     .deallocation-form {
@@ -18,10 +19,16 @@
       padding: 20px;
       border: 1px solid #2ecc71; /* Green border */
       border-radius: 8px;
+      background-color:#33f9fd;
 
       label {
         display: block;
         margin-bottom: 10px;
+
+        span {
+          display: block;
+          margin-bottom: 5px;
+        }
 
         input,
         select {
@@ -34,7 +41,7 @@
       }
 
       button {
-        background-color: #e74c3c; /* Red background */
+        background-color: #e13a28; /* Red background */
         color: #fff;
         padding: 10px;
         border: none;
@@ -42,29 +49,5 @@
         cursor: pointer;
       }
     }
-  }
-
-  .sidebar {
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #2c3e50; /* Dark background */
-    padding-top: 20px;
-  }
-
-  .sidebar a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    padding: 16px;
-    text-align: center;
-    font-size: 18px;
-  }
-
-  .sidebar a:hover {
-    background-color: #34495e; /* Darker background on hover */
-    color: black;
   }
 }

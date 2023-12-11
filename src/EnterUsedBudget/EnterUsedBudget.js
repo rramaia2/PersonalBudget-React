@@ -57,116 +57,100 @@ const EnterUsedBudget = () => {
 
   return (
     <div style={{ display: 'flex' }}>
-            {/* <div className="sidebar">
- 
-    <ul>
-      <li>
-        <a href="/usermanual" tabIndex="3">
-          User Manual
-        </a>
-      </li>
-      <li>
-        <a href="/homepage" tabIndex="4">
-          HomePage
-        </a>
-      </li>
-      <li>
-        <a href="/configure" tabIndex="5">
-          Configure
-        </a>
-      </li>
-      <li>
-        <a href="/enterusedbudget" tabIndex="6">
-          Allocate Used Budget
-        </a>
-      </li>
-    </ul>
-  </div> */}
-  <div style={{ ...styles.container }}>
-      <h2 style={styles.heading}>Enter Used Budget</h2>
-      <form onSubmit={handleUsedBudgetSubmit} style={styles.form}>
-        <label style={styles.label}>
-          Select Month:
-          <select
-            value={usedselectedMonth}
-            onChange={(e) => setUsedSelectedMonth(e.target.value)}
-            style={styles.input}
-          >
-            {[
-              "January",
-              "February",
-              "March",
-              "April",
-              "May",
-              "June",
-              "July",
-              "August",
-              "September",
-              "October",
-              "November",
-              "December",
-            ].map((month) => (
-              <option key={month} value={month}>
-                {month}
-              </option>
-            ))}
-          </select>
-        </label>
+      <div style={styles.container}>
+        <h2 style={styles.heading}>Enter Used Budget</h2>
+        <form onSubmit={handleUsedBudgetSubmit} style={styles.form}>
+          {/* Accessible label for Month selection */}
+          <label style={styles.label}>
+            Select Month:
+            <select
+              value={usedselectedMonth}
+              onChange={(e) => setUsedSelectedMonth(e.target.value)}
+              style={styles.input}
+              aria-label="Select Month"
+            >
+              {[
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+              ].map((month) => (
+                <option key={month} value={month}>
+                  {month}
+                </option>
+              ))}
+            </select>
+          </label>
 
-        <label style={styles.label}>
-          Select Year:
-          <input
-            type="number"
-            value={usedselectedYear}
-            onChange={(e) => setUsedSelectedYear(e.target.value)}
-            style={styles.input}
-          />
-        </label>
+          {/* Accessible label for Year input */}
+          <label style={styles.label}>
+            Select Year:
+            <input
+              type="number"
+              value={usedselectedYear}
+              onChange={(e) => setUsedSelectedYear(e.target.value)}
+              style={styles.input}
+              aria-label="Select Year"
+            />
+          </label>
 
-        <label style={styles.label}>
-          Select Category:
-          <select
-            value={usedselectedCategory}
-            onChange={(e) => setUsedSelectedCategory(e.target.value)}
-            style={styles.input}
-          >
-            {usedCategories.map((category) => (
-              <option key={category} value={category}>
-                {category}
-              </option>
-            ))}
-          </select>
-        </label>
+          {/* Accessible label for Category selection */}
+          <label style={styles.label}>
+            Select Category:
+            <select
+              value={usedselectedCategory}
+              onChange={(e) => setUsedSelectedCategory(e.target.value)}
+              style={styles.input}
+              aria-label="Select Category"
+            >
+              {usedCategories.map((category) => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
+          </label>
 
-        <label style={styles.label}>
-          Enter Used Budget:
-          <input
-            type="number"
-            value={usedBudget}
-            onChange={(e) => setUsedBudget(e.target.value)}
-            style={styles.input}
-          />
-        </label>
-        <button type="submit" style={styles.button}>
-          Submit
-        </button>
-      </form>
+          {/* Accessible label for Used Budget input */}
+          <label style={styles.label}>
+            Enter Used Budget:
+            <input
+              type="number"
+              value={usedBudget}
+              onChange={(e) => setUsedBudget(e.target.value)}
+              style={styles.input}
+              aria-label="Enter Used Budget"
+            />
+          </label>
+          {/* Accessible button with label */}
+          <button type="submit" style={styles.button}>
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
-  </div>
   );
 };
 
 const styles = {
   container: {
-    maxWidth: '400px',
+    maxWidth: '50%',
     margin: '50px auto',
     height: 'calc(100vh - 44px)', // Wrap the value in backticks
     alignItems: 'center', // Center horizontally
     justifyContent: 'center', // Center vertically
-    padding: '20px',
+    padding: '80px 100px',
     boxShadow: '0 5px 10px rgba(0,0,0,0.2)',
-    backgroundColor: '#f8f8f8',
-    borderRadius: '8px',
+    backgroundColor: '#3f9fd',
+    borderRadius: '20px',
   },
   heading: {
     fontSize: '24px',
@@ -178,8 +162,8 @@ const styles = {
   form: {
     display: 'flex',
     width: '230px',
-    alignItems: 'center', 
-    justifyContent: 'space-around', // Corrected syntax
+    alignItems: 'center',
+    justifyContent: 'space-around',
     flexDirection: 'column',
   },
   label: {

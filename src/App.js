@@ -4,9 +4,9 @@ import './App.css'
 import Menu from './Menu/Menu';
 import HomePage from './HomePage/HomePage';
 import Footer from './Footer/Footer';
-import UserManual from './UserManual/UserManual';
+import Howtouse from './Howtouse/Howtouse';
 import LoginPage from './LoginPage/LoginPage';
-import RegisterPage from './RegisterPage/RegisterPage';
+import Signup from './Signup/Signup';
 import ConfigurePage from './ConfigurePage/ConfigurePage';
 import EnterUsedBudget from './EnterUsedBudget/EnterUsedBudget';
 function App() {
@@ -15,9 +15,9 @@ function App() {
       <Menu />
       <div className="mainContainer">
         <Routes>
-          <Route path="/usermanual" element={<UserManual />} />
+          <Route path="/Howtouse" element={<Howtouse />} />
           <Route path="/homepage" element={<HomePage />} />
-          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/Signup" element={<Signup />} />
           <Route path="/configure" element={<ConfigurePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/enterusedbudget" element={<EnterUsedBudget />} />
@@ -27,6 +27,7 @@ function App() {
           />
         </Routes>
       </div>
+      <Footer/>
       
     </Router>
   );
