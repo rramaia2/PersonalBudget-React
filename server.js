@@ -17,10 +17,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const db = mysql.createConnection({
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'raghava',
-  password: process.env.DB_PASSWORD || 'Pqmz@1234567',
-  database: process.env.DB_DATABASE || 'budget_app',
+  host: process.env.DB_HOST || 'sql5.freemysqlhosting.net',
+  user: process.env.DB_USER || 'sql5669596',
+  password: process.env.DB_PASSWORD || 'lW732M5MQA',
+  database: process.env.DB_DATABASE || 'sql5669596',
   port: process.env.DB_PORT || '3306',
 });
 
@@ -414,5 +414,5 @@ app.get("/user/validateToken", (req, res) => {
 
 
 app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
+  console.log(`Server is running at http://sql5.freemysqlhosting.net:${PORT}`);
 });

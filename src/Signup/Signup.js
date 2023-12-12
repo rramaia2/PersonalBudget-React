@@ -11,7 +11,7 @@ const RegisterPage = () => {
 
   const handleRegister = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/register', {
+      const response = await fetch('http://pbudget-4f755.web.app/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

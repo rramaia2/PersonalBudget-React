@@ -18,7 +18,7 @@ const EnterUsedBudget = () => {
 
   const fetchUsedCategories = () => {
     axios
-      .get("http://localhost:3000/api/get-all-categories")
+      .get("http://pbudget-4f755.web.app/api/get-all-categories")
       .then((response) => {
         setUsedCategories(response.data);
         // Assuming you want to select the first category by default
@@ -44,7 +44,7 @@ const EnterUsedBudget = () => {
     };
 
     try {
-      await axios.post("http://localhost:3000/api/enter-used-budget", payload);
+      await axios.post("http://pbudget-4f755.web.app/api/enter-used-budget", payload);
       console.log("Used Budget update successful");
       // You might want to call fetchData here or handle the success as needed
     } catch (error) {

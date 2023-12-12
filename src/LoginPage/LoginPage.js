@@ -10,7 +10,7 @@ const LoginPage = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/login', {
+      const response = await fetch('http://pbudget-4f755.web.app/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

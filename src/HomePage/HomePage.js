@@ -68,7 +68,7 @@ function HomePage() {
 
   const fetchData = (year, month, userId) => {
     axios
-      .get(`http://localhost:3000/api/get-budgets/${year}/${month}/${userId}`)
+      .get(`http://pbudget-4f755.web.app/api/get-budgets/${year}/${month}/${userId}`)
       .then((response) => {
         setBudgets(response.data);
       })
@@ -81,7 +81,7 @@ function HomePage() {
     const storedUserId = localStorage.getItem("userId");
     axios
       .get(
-        `http://localhost:3000/api/get-table-data/${selectedYearTable}/${storedUserId}`
+        `http://pbudget-4f755.web.app/api/get-table-data/${selectedYearTable}/${storedUserId}`
       )
       .then((response) => {
         setTableData(response.data);
@@ -93,7 +93,7 @@ function HomePage() {
 
   const fetchUsedCategories = () => {
     axios
-      .get("http://localhost:3000/api/get-all-categories")
+      .get("http://pbudget-4f755.web.app/api/get-all-categories")
       .then((response) => {
         setUsedCategories(response.data);
         // Assuming you want to select the first category by default
@@ -208,7 +208,7 @@ function HomePage() {
     };
 
     try {
-      await axios.post("http://localhost:3000/api/enter-used-budget", payload);
+      await axios.post("http://pbudget-4f755.web.app/api/enter-used-budget", payload);
       console.log("Used Budget update successful");
       fetchData(selectedMonth, userId);
     } catch (error) {
@@ -238,7 +238,7 @@ function HomePage() {
   const fetchLineData = (userId, formattedStartMonth, formattedEndMonth) => {
     axios
       .get(
-        `http://localhost:3000/api/get-line-graph-data-range/${usedselectedCategory}/${startYear}/${formattedStartMonth}/${endYear}/${formattedEndMonth}/${userId}`
+        `http://pbudget-4f755.web.app/api/get-line-graph-data-range/${usedselectedCategory}/${startYear}/${formattedStartMonth}/${endYear}/${formattedEndMonth}/${userId}`
       )
       .then((response) => {
         setLineGraphData(response.data);
