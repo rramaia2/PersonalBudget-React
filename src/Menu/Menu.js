@@ -58,7 +58,7 @@ function Menu() {
         {!userId ? (
           <>
             <li><Link itemProp="url" to="/login" tabIndex="5">Login</Link></li>
-            <li><Link itemProp="url" to="/Sign Up" tabIndex="6">Sign Up</Link></li>
+            <li><Link itemProp="url" to="/Signup" tabIndex="6">Sign Up</Link></li>
           </>
         ) : (
           <>
